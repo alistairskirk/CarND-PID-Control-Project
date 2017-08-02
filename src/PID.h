@@ -9,6 +9,7 @@ public:
   double p_error;
   double i_error;
   double d_error;
+  double err;
 
   /*
   * Coefficients
@@ -16,6 +17,7 @@ public:
   double Kp;
   double Ki;
   double Kd;
+  double prev_cte;
 
   /*
   * Constructor
@@ -30,7 +32,7 @@ public:
   /*
   * Initialize PID.
   */
-  void Init(double Kp, double Ki, double Kd);
+  void Init(double Kp_i, double Ki_i, double Kd_i);
 
   /*
   * Update the PID error variables given cross track error.
